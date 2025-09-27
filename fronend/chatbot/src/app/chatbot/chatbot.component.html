@@ -1,0 +1,73 @@
+<div class="chat-container" #chatContainer [class.dark-mode]="isDarkMode">
+  <div class="chat-header" #dragHandle>
+    💬 BOTBUSTER
+    <span class="mode-toggle" (click)="toggleDarkMode()">
+      {{ isDarkMode ? '☀️' : '🌙' }}
+    </span>
+    <span class="close-btn" (click)="close.emit()">✖</span>
+  </div>
+
+  <!-- Chat body -->
+  <div class="chat-body" #chatBody>
+    <div *ngFor="let msg of messages" class="message" [ngClass]="msg.sender">
+  <img *ngIf="msg.sender === 'bot'" src="assets/bot.png" class="avatar">
+  <img *ngIf="msg.sender === 'user'" src="assets/user.png" class="avatar">
+
+  <div class="bubble" [ngClass]="msg.sender">
+    <!-- Typing bubble -->
+    <div *ngIf="msg.isTyping" class="typing-text">
+      Bot is typing<span class="dots">...</span>
+    </div>
+
+    <!-- Normal message -->
+    <div *ngIf="!msg.isTyping">
+      <span class="message-text">{{ msg.text }}</span>
+      <div class="time">{{ msg.timestamp | date:'shortTime' }}</div>
+    </div>
+  </div>
+</div>
+
+
+    <div *ngIf="showFeedbackForm" class="feedback-form">
+      <h4>How would you rate this chat so far?</h4>
+      <div class="rating-options">
+        <label *ngFor="let option of ratingOptions">
+          <input type="radio" name="rating" [(ngModel)]="feedback.rating" [value]="option" />
+          {{ option }}
+        </label>
+      </div>
+
+      <h4>What worked well?</h4>
+      <div class="checkbox-options">
+        <label *ngFor="let option of workedWellOptions">
+          <input type="checkbox" [(ngModel)]="feedback.workedWell[option]" />
+          {{ option }}
+        </label>
+      </div>
+
+      <h4>Want to add any details?</h4>
+      <textarea [(ngModel)]="feedback.details" placeholder="Add your comments..."></textarea>
+
+      <div class="feedback-buttons">
+        <button (click)="cancelFeedback()">Cancel</button>
+        <button (click)="submitFeedback()">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer outside chat-body -->
+  <div class="chat-footer" *ngIf="!showFeedbackForm">
+    <input type="text" [(ngModel)]="userInput" placeholder="Type your question..." (input)="onInputChange()"
+      (keyup.enter)="sendMessage()">
+    <button (click)="sendMessage()" class="send-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+        <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" />
+      </svg>
+    </button>
+  </div>
+  <div *ngIf="suggestions.length" class="suggestion-chips">
+    <button *ngFor="let s of suggestions" (click)="selectSuggestion(s)">
+      {{ s }}
+    </button>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+/* Floating button */
+.chatbot-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #0078d7;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+//   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 10000;
+  transition: background 0.3s;
+}
+
+.chatbot-toggle:hover {
+  background: #005fa3;
+}
+
+/* Chatbot panel */
+.chatbot-panel {
+  position: fixed;
+  bottom: 0px; /* leave space for button */
+  right: 20px;
+  width: 380px;
+  max-width: 95vw;
+  height: 70vh;
+  max-height: calc(100vh - 120px);
+  background: #fff;
+  border-radius: 12px;
+//   box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  z-index: 10000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all .5s ease 0s;
+}
+
+.chatbot-upload {
+  padding: 8px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.upload-label {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid #007bff;
+  background: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.upload-label:hover {
+  background: #0056b3;
+}
+
+
+/* Animation */
+.animate-slide {
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,149 @@
+{
+	"FAQs": [
+		{
+			"Role": "User",
+			"Question": "What is the PUMAA?",
+			"Answer": "PUMAA is a dynamic insurance platform supporting multiple Managing General Agents (MGAs) across various lines of business—Personal, Commercial, and Professional."
+		},
+		{
+			"Role": "User",
+			"Question": "How do I get a quote in PUMAA?",
+			"Answer": "First, log in. Then, select the New Quote button. Next, choose the coverage. After that, select the office, state, and coverage options."
+		},
+		{
+			"Role": "User",
+			"Question": "Who do I contact for support?",
+			"Answer": "For assistance, please email support@pumaa.com or utilize the in-app help feature."
+		},
+		{
+			"Role": "User",
+			"Question": "How do I reset my password in PUMAA?",
+			"Answer": "Click 'Forgot Password' on the login screen. Then, enter your username and click the Submit button. You will receive an email with a link to reset your password."
+		},
+		{
+			"Role": "User",
+			"Question": "Can I access PUMAA from mobile devices?",
+			"Answer": "Yes, PUMAA is accessible from most modern smartphones and tablets via your web browser."
+		},
+		{
+			"Role": "User",
+			"Question": "Does PUMAA support multiple users and roles?",
+			"Answer": "Yes, PUMAA supports multiple users and roles with role-based access control (RBAC) for enhanced security and operational efficiency."
+		},
+		{
+			"Role": "User",
+			"Question": "Is my data secure in PUMAA?",
+			"Answer": "Yes, PUMAA uses secure servers, firewalls, encryption protocols, and HTTPS via SSL to protect your data."
+		},
+		{
+			"Role": "User",
+			"Question": "How do I update my agency information?",
+			"Answer": "Navigate to Settings > Agency Profile to update your agency details."
+		},
+		{
+			"Role": "User",
+			"Question": "How do I download policy documents?",
+			"Answer": "Go to the policy dashboard, select your policy, and click 'Download Documents'."
+		},
+		{
+			"Role": "User",
+			"Question": "Is training available for new users?",
+			"Answer": "Yes, PUMAA offers onboarding and training resources for new users."
+		},
+		{
+			"Role": "User",
+			"Question": "How do I submit a claim in PUMAA?",
+			"Answer": "Navigate to the Claims section, select your policy, and follow the guided steps to submit a new claim."
+		},
+		{
+			"Role": "User",
+			"Question": "Can I track claim status in PUMAA?",
+			"Answer": "Yes, you can view and track the status of all submitted claims from your dashboard."
+		},
+		{
+			"Role": "User",
+			"Question": "Does PUMAA support electronic signatures?",
+			"Answer": "Yes, PUMAA supports secure electronic signatures for policy documents and endorsements."
+		},
+		{
+			"Role": "User",
+			"Question": "Can I customize user permissions in PUMAA?",
+			"Answer": "Yes, administrators can define roles and assign tailored permissions using RBAC."
+		},
+		{
+			"Role": "User",
+			"Question": "How do I renew a policy in PUMAA?",
+			"Answer": "Go to the policy dashboard, select the policy, and click 'Renew Policy'. Follow the prompts to complete renewal."
+		},
+		{
+			"Role": "User",
+			"Question": "Does PUMAA offer reporting and analytics?",
+			"Answer": "Yes, PUMAA provides built-in reporting tools and analytics dashboards for policy, claims, and user activity."
+		},
+		{
+			"Role": "User",
+			"Question": "Can I export data from PUMAA?",
+			"Answer": "You can export policy, claims, and user data in various formats from the Reports section."
+		},
+		{
+			"Role": "User",
+			"Question": "How do I update billing or payment information?",
+			"Answer": "Navigate to 'Settings' > 'Billing' to update your payment methods and billing details."
+		},
+		{
+			"Role": "User",
+			"Question": "Does PUMAA support bulk data import?",
+			"Answer": "Yes, PUMAA allows bulk import of policies, claims, and contacts via CSV or Excel files."
+		},
+		{
+			"Role": "User",
+			"Question": "What is a premium?",
+			"Answer": "Premium is the amount of money you pay to an insurance company in exchange for coverage."
+		},
+		{
+			"Role": "User",
+			"Question": "What is a claim?",
+			"Answer": "Claim is a formal request made by a policyholder to an insurance company asking for payment or services covered under their insurance policy."
+		},
+		{
+			"Role": "User",
+			"Question": "What is renewal?",
+			"Answer": "Renewal is the process of extending your insurance policy for another term after the current coverage period ends."
+		},
+		{
+			"Role": "User",
+			"Question": "What is an effective date?",
+			"Answer": "Effective Date is the date when your insurance coverage officially begins."
+		},
+		{
+			"Role": "User",
+			"Question": "What is an endorsement?",
+			"Answer": "Endorsement is a written amendment or addition to an existing insurance policy that changes its terms, coverage, or conditions."
+		},
+		{
+			"Role": "User",
+			"Question": "What is a premium adjustment?",
+			"Answer": "Premium Adjustment is a change in the amount you pay for your insurance, usually calculated after the policy period based on actual exposure or risk."
+		},
+		{
+			"Role": "User",
+			"Question": "What is the difference between commercial and personal coverage?",
+			"Answer": "Commercial Coverage protects businesses and their assets. Personal Coverage protects individuals and families."
+		},
+		{
+			"Role": "User",
+			"Question": "What is a policy limit?",
+			"Answer": "Policy Limit is the maximum amount an insurance company will pay for a covered loss."
+		},
+		{
+			"Role": "User",
+			"Question": "What does coverage mean?",
+			"Answer": "Coverage refers to the protection provided by an insurance policy."
+		},
+		{
+			"Role": "User",
+			"Question": "What is a claim settlement?",
+			"Answer": "Claim Settlement is the process by which an insurance company reviews, approves, and pays out the amount owed to a policyholder for a covered claim."
+		}
+	]
+}

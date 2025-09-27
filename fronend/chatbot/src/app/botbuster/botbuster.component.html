@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #000;
+    }
+
+    .mainarea {
+        width: 100%;
+        /* height: 100vh; */
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        height: 100%;
+    }
+
+    .left {
+        width: 50%;
+        float: left;
+        background-image: var(--rg-gradient-a, linear-gradient(120deg, #64d6ff 20.08%, #d2ccff 75.81%));
+        /* height: 100vh; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .right {
+        width: 50%;
+        float: left;
+        /* height: 100vh; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f7f7f7;
+        /* padding: 0px 10%;
+    box-sizing: border-box; */
+        /* padding-bottom: 30px; */
+    }
+
+    .left .logo {}
+
+    .left .logo img {
+        /* border-radius: 80px; */
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .logo img {
+        /*background: #fff;*/
+        padding: 20px;
+        /*border-radius: 200px;*/
+    }
+
+    .right .intro-message {
+        padding-top: 0px;
+    }
+
+    .intro-message {
+        /* padding-top: 30px; */
+    }
+
+    .chatarea {
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 500px;
+    }
+
+    .chatarea {
+        text-align: center;
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .chatbox {
+        position: relative;
+        width: 80%;
+    }
+
+    .chatbox .send-btn {
+        position: absolute;
+        right: -30px;
+        bottom: 15px;
+        background-image: var(--rg-gradient-a, linear-gradient(120deg, #64d6ff 20.08%, #d2ccff 75.81%));
+        padding: 10px;
+        border-radius: 100px;
+        border: 1px solid #673AB7;
+        cursor: pointer;
+    }
+
+    .chatbox textarea {
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 20px;
+        resize: none;
+        font-size: 14px;
+        margin-top: 20px;
+        box-shadow: 1px 1px 6px #c1c0da;
+        outline: none;
+        width: 100%;
+        height: 100px;
+    }
+
+    .chatbox textarea:focus {
+        border: 1px solid #8d8d8d;
+    }
+
+    .avatar {
+        height: 35px;
+        border-radius: 100px;
+        box-shadow: 1px 1px 6px #c1c0da;
+        /* border: 1px solid #ccc; */
+        margin-right: 10px;
+    }
+
+    .message {
+        display: flex;
+    }
+
+    .bubble {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 20px;
+        text-align: left;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .bubble.bot {
+        background-image: var(--rg-gradient-a, linear-gradient(120deg, #64d6ff 20.08%, #d2ccff 75.81%));
+        border: 1px solid #673AB7;
+        text-align: left;
+        width: 70%;
+    }
+
+    .message.bot {
+        flex-direction: row-reverse;
+    }
+
+    .message.bot .avatar {
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+
+    .feedback-form {
+        background: #fff;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .feedback-form textarea {
+        width: 100%;
+        height: 70px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-size: 14px;
+    }
+
+    .feedback-buttons button {
+        background-image: var(--rg-gradient-a, linear-gradient(120deg, #64d6ff 20.08%, #d2ccff 75.81%));
+        font-size: 14px;
+        padding: 8px 15px;
+        margin-right: 10px;
+        margin-top: 10px;
+        color: #fff;
+        border: 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid #673AB7;
+    }
+
+    h4 {
+        margin-bottom: 5px;
+    }
+
+    .suggestion-chips {}
+
+    .suggestion-chips button {
+        background-image: var(--rg-gradient-a, linear-gradient(120deg, #64d6ff 20.08%, #d2ccff 75.81%));
+        font-size: 12px;
+        padding: 8px 15px;
+        margin-right: 10px;
+        margin-top: 10px;
+        color: #000;
+        border: 0px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 1px solid #673AB7;
+    }
+
+    .chat-body {}
+</style>
+
+<body>
+    <div class="mainarea">
+        <div class="left">
+            <div class="logo">
+                <img src="assets/logo1.png" height="60">
+                <div class="intro-message">
+                    <h1>Welcome to AskInsure AI</h1>
+                    <p>Ask me anything. I'm powered by BotBusters-Dyad.</p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="chatarea">
+                <div class="logo">
+                    <img src="assets/logo.png" height="50">
+                </div>
+                <!-- Chat body -->
+                <div class="chat-body" #chatBody>
+                    <div *ngFor="let msg of messages" class="message" [ngClass]="msg.sender">
+                        <img *ngIf="msg.sender === 'bot'" src="assets/bot.png" class="avatar">
+                        <img *ngIf="msg.sender === 'user'" src="assets/user.png" class="avatar">
+
+                        <div class="bubble" [ngClass]="msg.sender">
+                            <!-- Typing bubble -->
+                            <div *ngIf="msg.isTyping" class="typing-text">
+                                Bot is typing<span class="dots">...</span>
+                            </div>
+
+                            <!-- Normal message -->
+                            <div *ngIf="!msg.isTyping">
+                                <span class="message-text">{{ msg.text }}</span>
+                            </div>
+                        </div>
+                        <!-- <div class="time">{{ msg.timestamp | date:'shortTime' }}</div> -->
+                    </div>
+
+
+                    <div *ngIf="showFeedbackForm" class="feedback-form">
+                        <h4>How would you rate this chat so far?</h4>
+                        <div class="rating-options">
+                            <label *ngFor="let option of ratingOptions">
+                                <input type="radio" name="rating" [(ngModel)]="feedback.rating" [value]="option" />
+                                {{ option }}
+                            </label>
+                        </div>
+
+                        <h4>What worked well?</h4>
+                        <div class="checkbox-options">
+                            <label *ngFor="let option of workedWellOptions">
+                                <input type="checkbox" [(ngModel)]="feedback.workedWell[option]" />
+                                {{ option }}
+                            </label>
+                        </div>
+
+                        <h4>Want to add any details?</h4>
+                        <textarea [(ngModel)]="feedback.details" placeholder="Add your comments..."></textarea>
+
+                        <div class="feedback-buttons">
+                            <button style="background: #857bd3 !important;" (click)="cancelFeedback()">Cancel</button>
+                            <button (click)="submitFeedback()">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="suggestions.length" class="suggestion-chips">
+                    <button *ngFor="let s of suggestions" (click)="selectSuggestion(s)">
+                        {{ s }}
+                    </button>
+                </div>
+                <div class="chatbox">
+                    <textarea id="" name="" [(ngModel)]="userInput" placeholder="Type your question..."
+                        (input)="onInputChange()" (keyup.enter)="sendMessage()"></textarea>
+                    <button (click)="sendMessage()" class="send-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+                            <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
